@@ -743,7 +743,7 @@ Detaillierte Abzüge (monatlich):
                 <span className="text-lg sm:text-xl font-bold text-gray-900">Stundenlohn Rechner</span>
               </div>
 
-              {/* Desktop Navigation */}
+              {/* --- START DER ÄNDERUNGEN (DESKTOP) --- */}
               <div className="hidden md:flex items-center space-x-4">
                 <a href="#rechner" className="text-[#4A69E2] font-medium text-sm lg:text-base">
                   Rechner
@@ -751,18 +751,12 @@ Detaillierte Abzüge (monatlich):
                 <a href="#faq" className="text-gray-600 hover:text-gray-900 text-sm lg:text-base">
                   FAQ
                 </a>
-                <a href="#kontakt" className="text-gray-600 hover:text-gray-900 text-sm lg:text-base">
+                <a href="/kontakt" className="text-gray-600 hover:text-gray-900 text-sm lg:text-base">
                   Kontakt
                 </a>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setShowTour(true)}
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  <HelpCircle className="h-4 w-4 mr-1" />
-                  Hilfe
-                </Button>
+                <a href="/ueber-uns" className="text-gray-600 hover:text-gray-900 text-sm lg:text-base">
+                  Über uns
+                </a>
 
                 <Button
                   variant="ghost"
@@ -773,6 +767,7 @@ Detaillierte Abzüge (monatlich):
                   {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                 </Button>
               </div>
+              {/* --- ENDE DER ÄNDERUNGEN (DESKTOP) --- */}
 
               {/* Mobile Menu Button */}
               <div className="md:hidden">
@@ -782,7 +777,7 @@ Detaillierte Abzüge (monatlich):
               </div>
             </div>
 
-            {/* Mobile Menu */}
+            {/* --- START DER ÄNDERUNGEN (MOBIL) --- */}
             {mobileMenuOpen && (
               <div className="md:hidden border-t bg-white py-4">
                 <div className="flex flex-col space-y-3">
@@ -796,12 +791,16 @@ Detaillierte Abzüge (monatlich):
                   <a href="#faq" className="text-gray-600 px-4 py-2" onClick={() => setMobileMenuOpen(false)}>
                     FAQ
                   </a>
-                  <a href="#kontakt" className="text-gray-600 px-4 py-2" onClick={() => setMobileMenuOpen(false)}>
+                  <a href="/kontakt" className="text-gray-600 px-4 py-2" onClick={() => setMobileMenuOpen(false)}>
                     Kontakt
+                  </a>
+                  <a href="/ueber-uns" className="text-gray-600 px-4 py-2" onClick={() => setMobileMenuOpen(false)}>
+                    Über uns
                   </a>
                 </div>
               </div>
             )}
+            {/* --- ENDE DER ÄNDERUNGEN (MOBIL) --- */}
           </div>
         </nav>
 
