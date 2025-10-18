@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script" // 1. 在这里导入 Script 组件
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -129,6 +130,15 @@ export default function RootLayout({
         {/* 性能提示 */}
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
         <link rel="prefetch" href="/android-chrome-192x192.png" />
+
+        {/* 2. Google AdSense 代码已添加在这里 */}
+        <Script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1528586776567779"
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+        />
+        
       </head>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
